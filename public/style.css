@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "PT Sans", sans-serif;
+    background-color: #f7f4e9;
+    background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #F8B195, #F67280, #C06C84);
+    color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+/* Main Content */
+.main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Note Input Section */
+.note-input-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.note-input {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    border-left: 5px solid #F67280;
+    border-right: 5px solid #F67280;
+    margin: 20px;
+}
+
+.note-input h1 {
+    font-size: 1.8rem;
+    color: #F67280;
+    margin-bottom: 20px;
+    font-family: "Courier New", monospace;
+}
+
+.note-input input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid #F67280;
+    background-color: transparent;
+    font-size: 18px;
+    font-family: "Courier New", monospace;
+    outline: none;
+}
+
+.note-input input[type="text"]:focus {
+    border-bottom-color: #C06C84;
+}
+
+.note-input button {
+    background-color: #C06C84;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: "Courier New", monospace;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.note-input button:hover {
+    background-color: #6C5B7B;
+}
+
+/* Note Display Section */
+.main-note-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 85%;
+    margin: auto;
+    
+}
+
+.note {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border-left: 5px solid #F8B195;
+    background-color: #fdfdf6;
+    border: 1px solid #ddd;
+    
+}
+
+.note h2 {
+    font-family: "Courier New", monospace;
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.note p {
+    font-size: 1rem;
+    font-family: "Courier New", monospace;
+}
+
+.dlt {
+    color: #C06C84;
+    background: none;
+    border: none;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.dlt:hover {
+    color: #6C5B7B;
+}
+
+.footer {
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+    color:rgb(94, 94, 94);
+    font-family: "Courier New", monospace;
+}
+
+@media (max-width: 1200px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .note {
+        max-width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .note-input h1 {
+        font-size: 1.6rem;
+    }
+
+    .note {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 576px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    .main-note-container{
+        flex-direction: column;
+    }
+
+    .note-input h1 {
+        font-size: 1.4rem;
+    }
+
+    .note {
+        max-width: 90%;
+    }
+}
