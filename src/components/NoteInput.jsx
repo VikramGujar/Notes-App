@@ -18,12 +18,20 @@ function NoteInput(props) {
   }
 
   function noteAdd(event) {
+    event.preventDefault();
+
+    if (!noteInputes.title.trim() || !noteInputes.content.trim()) {
+      alert("Cannot add empty note. Please provide both title and content.");
+      return; 
+    }
+   
     props.onClick(noteInputes);
+
     setInputs({
       title: "",
       content: ""
     });
-    event.preventDefault();
+    
   }
 
   return (
